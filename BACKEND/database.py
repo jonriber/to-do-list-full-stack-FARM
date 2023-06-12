@@ -3,7 +3,7 @@ from model import Todo
 #mongoDB driver helps to connect our db with python
 import motor.motor_asyncio
 
-
+#creating a client on our localhost
 client = motor.motor_asyncio.AsyncIOMotorClient('mongodb://localhost:27017')
 database = client.TodoList
 

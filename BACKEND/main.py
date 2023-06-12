@@ -5,6 +5,7 @@ from model import Todo
 #create fast api instance
 app = FastAPI()
 
+#database functions to update my DB
 from database import (
     fetch_all_todos,
     fetch_one_todo,
@@ -26,7 +27,7 @@ app.add_middleware(
 def read_root():
     return {"ping":"pong"}
 
-#CRUD OPERATIONS
+#CRUD OPERATIONS API ENDPOINTS
 
 #get all TODOS
 @app.get("/api/todo")

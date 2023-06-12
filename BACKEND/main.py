@@ -52,7 +52,7 @@ async def post_todo(todo:Todo):
 
 # update(put) todo by id
 @app.put("/api/todo{title}/",response_model=Todo)
-async def update_todo(title:str,description:str):
+async def put_todo(title:str,description:str):
     response = await update_todo(title,description)
     if response:
         return response

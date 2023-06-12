@@ -17,3 +17,30 @@ app.add_middleware(
 @app.get("/")
 def read_root():
     return {"ping":"pong"}
+
+#CRUD OPERATIONS
+
+#get all TODOS
+@app.get("/api/todo")
+async def get_todo():
+    return 1
+
+# get specific todo by id
+@app.get("/api/todo/{id}")
+async def get_todo_by_id(id):
+    return 1
+
+# post new todo
+@app.post("/api/todo")
+async def post_todo(todo):
+    return 1
+
+# update(put) todo by id
+@app.put("/api/todo/{id}")
+async def update_todo(id,data):
+    return 1
+
+#delete todo
+@app.delete("/api/todo{id}")
+async def delete_todo(id):
+    return 1
